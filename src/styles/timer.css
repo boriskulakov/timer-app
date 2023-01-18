@@ -1,0 +1,39 @@
+.timer .settingForm {
+  display: flex;
+  justify-content: center;
+  gap: 0.7rem;
+  position: relative;
+}
+
+.timer .settingForm::before,
+.timer .settingForm::after {
+  content: ':';
+  font-size: 3rem;
+  position: absolute;
+}
+.timer .settingForm::before {
+  left: calc(50% - 2.25rem);
+}
+.timer .settingForm::after {
+  right: calc(50% - 2.25rem);
+}
+
+.timer input {
+  width: 3.2rem;
+  border: none;
+  outline: none;
+  font-size: 3rem;
+  text-align: right;
+  color: #232946;
+  background-color: transparent;
+  border-bottom: 2px solid #232946;
+}
+.timer input::placeholder {
+  color: #23294679;
+}
+
+.timerMessage {
+  margin: 10px auto;
+  font-size: 1.5rem;
+  text-align: center;
+}

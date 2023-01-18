@@ -1,0 +1,40 @@
+.timeList {
+  width: 100%;
+  padding: 0.8rem;
+  margin: auto;
+  margin-top: 0.8rem;
+  box-sizing: border-box;
+  border-radius: 1rem;
+  font-size: 1.8rem;
+  background-color: #d4d8f0;
+  color: #232946;
+}
+
+.timepoints {
+  max-height: 13rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.timepoints::-webkit-scrollbar {
+  width: 2px;
+}
+.timepoints::-webkit-scrollbar-track {
+  display: none;
+}
+.timepoints::-webkit-scrollbar-thumb {
+  background-color: #232946;
+  border-radius: 1rem;
+}
+
+.timepoint {
+  display: grid;
+  grid-template-columns: 10% 1fr 1fr;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+  margin-right: 5px;
+}
+.timepoint.title {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
