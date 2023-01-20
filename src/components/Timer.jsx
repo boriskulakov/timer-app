@@ -21,6 +21,8 @@ export function Timer() {
   const [timeSettingDisplay, setTimeSettingDisplay] = useState(true);
 
   const timerHandler = () => {
+    if (!checkInputValues()) return;
+
     setTime((prev) => {
       return {
         second: prev.second,
@@ -92,6 +94,13 @@ export function Timer() {
     return `${addZero(time.getHours())}:${addZero(time.getMinutes())}:${addZero(
       time.getSeconds()
     )}`;
+  };
+
+  const checkInputValues = () => {
+    if (time.hour > 0 || time.second > 0 || time.minute > 0) {
+      return true;
+    }
+    return false;
   };
 
   return (
